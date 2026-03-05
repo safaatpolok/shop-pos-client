@@ -5,7 +5,7 @@ import StoreDashboardLayout from '@/pages/store/Dashboard/StoreDashboardLayout';
 import StoreEmployee from '@/pages/store/Employee/StoreEmployee';
 import Products from '@/pages/store/Product/Products';
 import StoreInfo from '@/pages/store/stoerInfo/StoreInfo';
-import Upgrade from '@/pages/store/upgrade/Upgradeg';
+import Upgrade from '@/pages/store/upgrade/Upgrade';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Sales from '../store/sales/Sales';
