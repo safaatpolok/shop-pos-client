@@ -1,0 +1,64 @@
+import { Card, CardContent } from '@/components/ui/card';
+import React from 'react';
+import { useSelector } from 'react-redux';
+
+// const shiftData = {
+//   topSellingProducts: [
+//     {
+//       id: 1,
+//       name: "Men Geometric Print Polo Neck Pure Cotton T-Shift",
+//       sellingPrice: 899,
+//       quantity: 5
+
+//     },
+//     {
+//       id: 2,
+//       name: "WomenMen Geometric Print Polo Neck Pure Cotton T-Shift",
+//       sellingPrice: 499,
+//       quantity: 9
+
+//     },
+
+//   ]
+// }
+
+const TopSellingItems = () => {
+
+  const shiftData = useSelector((state) => state.shiftReport?.currentShift);
+  return (
+    <Card>
+      <CardContent>
+        <h2 className='text-xl font-semibold mb-4'> Top Selling
+          Items
+        </h2>
+        <div className='space-y-3'>
+          {shiftData?.topSellingProducts?.map((product, index) =>
+            <div key={product.id} className='flex items-center'>
+              <div className='w-6 h-6 rounded-full bg-primary/10 flex itmes-center justify-center mr-3 text-sm font-medium '>
+
+                {index + 1}
+
+              </div>
+              <div className='flex-1'>
+                <div className='flex justify-between'>
+                  <span>{product.name}</span>
+                  <span>${product.sellingPrice}</span>
+
+                </div>
+                <div className='flex justify-between text-sm text-muted-foreground'>
+                  <span>{product.quantity} units sold</span>
+                </div>
+
+              </div>
+
+
+            </div>)}
+
+        </div>
+
+      </CardContent>
+    </Card>
+  );
+};
+
+export default TopSellingItems;
