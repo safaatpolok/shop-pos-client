@@ -9,15 +9,16 @@ import {
   SelectValue
 } from '@/components/ui/select';
 import FeatureSwitchGrid from './FeatureSwitchGrid';
-import ExtraFeatureList from './ExtrafeatureList';
+// import ExtraFeatureList from './ExtrafeatureList';
 import { Button } from '@/components/ui/button';
+import ExtraFeatureList from './ExtraFeatureList';
 
 const BILLING_CYCLES = [
   { label: 'Monthly', value: 'MONTHLY' },
   { label: 'Yearly', value: 'YEARLY' }
 ];
 
-const PlanForm = ({ values, isSubmitting, setFieldValue }) => {
+const PlanForm = ({ values, setFieldValue }) => {
 
   const handleFratureSwitch = (key, value) => {
     setFieldValue(key, value);
