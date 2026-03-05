@@ -4,7 +4,7 @@ import React from 'react';
 import { Outlet } from 'react-router';
 
 import { LayoutDashboard, Settings, Store, Users } from 'lucide-react';
-import AdminTopbar from './adminTopbar';
+import AdminTopbar from './AdminTopbar';
 
 
 
