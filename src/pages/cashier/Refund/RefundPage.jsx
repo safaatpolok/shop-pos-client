@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import OrderDetailsSection from './OrderDetailsSection';
 import ReturnItemSection from './ReturnItemSection';
 import ReturnReciptDialog from './ReturnReciptDialog';
-import OrderTable from './ORderTable';
+import OrderTable from './OrderTable';
 
 const RefundPage = () => {
   const [selectedOrder, setSelectedOrder] = useState(null);
