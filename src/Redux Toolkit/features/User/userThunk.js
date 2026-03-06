@@ -4,8 +4,8 @@ import { createAsyncThunk } from "@reduxjs/toolkit"
 
 
 export const getUserProfile = createAsyncThunk(
-  "user/getProfule",
-  async (token, { isRejectedWithValue }) => {
+  "user/getProfile",
+  async (token, { rejectedWithValue }) => {
     try {
       const res = await api.get("/api/users/profile", {
         headers: { Authorization: `Bearer ${token}` },
@@ -14,7 +14,7 @@ export const getUserProfile = createAsyncThunk(
       return res.data;
     } catch (error) {
       console.log("error", error?.response?.data)
-      return isRejectedWithValue(
+      return rejectedWithValue(
         error?.response?.data?.message || "Faild to featch profile"
       );
 
