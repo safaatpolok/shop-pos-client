@@ -5,7 +5,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit"
 
 export const getUserProfile = createAsyncThunk(
   "user/getProfile",
-  async (token, { rejectedWithValue }) => {
+  async (token, { rejecteWithValue }) => {
     try {
       const res = await api.get("/api/users/profile", {
         headers: { Authorization: `Bearer ${token}` },
@@ -14,7 +14,7 @@ export const getUserProfile = createAsyncThunk(
       return res.data;
     } catch (error) {
       console.log("error", error?.response?.data)
-      return rejectedWithValue(
+      return rejecteWithValue(
         error?.response?.data?.message || "Faild to featch profile"
       );
 
@@ -83,7 +83,7 @@ export const logout = createAsyncThunk(
   "user/logout",
   async (_, { rejectedWithValue }) => {
     try {
-      localStorage.getItem('jwt')
+      localStorage.removeItem('jwt')
 
     } catch (error) {
       console.log("error", error)
