@@ -152,8 +152,8 @@ const Login = () => {
                 <p className='text-sm text-muted-foreground text-center'>
 
                   <strong>Demo Account:</strong> <br />
-                  Email:demo@pospro.com<br />
-                  Password:demo123
+                  Email:raan@gmail.com<br />
+                  Password:12345678
 
                 </p>
               </div>
