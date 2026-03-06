@@ -61,7 +61,7 @@ export const getAllCashier = createAsyncThunk(
   }
 )
 export const getUserById = createAsyncThunk(
-  "user/getProfile",
+  "user/getUById",
   async (userId, { rejectedWithValue }) => {
     try {
       const res = await api.get(`/api/users/${userId}`, {
